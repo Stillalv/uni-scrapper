@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb, #27272a);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover, #3f3f46);
+}
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --input-bg: #ffffff;
+  --input-border: #cbd5e1;
+  --primary: #0284c7;
+  --primary-hover: #0369a1;
+  --muted: #64748b;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+  --panel-bg: #f1f5f9;
+  --table-hover: #f1f5f9;
+  --table-selected: #e0f2fe;
+  --table-selected-text: #0369a1;
+  --terminal-bg: #0f172a;
+}
+
+.dark {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --card-bg: #18181b;
+  --card-border: #27272a;
+  --input-bg: rgba(24, 24, 27, 0.4);
+  --input-border: #27272a;
+  --primary: #38bdf8;
+  --primary-hover: #7dd3fc;
+  --muted: #71717a;
+  --scrollbar-thumb: #27272a;
+  --scrollbar-thumb-hover: #3f3f46;
+  --panel-bg: rgba(24, 24, 27, 0.1);
+  --table-hover: #27272a;
+  --table-selected: rgba(56, 189, 248, 0.1);
+  --table-selected-text: #38bdf8;
+  --terminal-bg: #000000;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-input-bg: var(--input-bg);
+  --color-input-border: var(--input-border);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-muted: var(--muted);
+  --color-panel-bg: var(--panel-bg);
+  --color-table-hover: var(--table-hover);
+  --color-table-selected: var(--table-selected);
+  --color-table-selected-text: var(--table-selected-text);
+  --color-terminal-bg: var(--terminal-bg);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
